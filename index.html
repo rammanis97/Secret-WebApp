@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Secret</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio loop id="bgmusic">
+    <source src="see-you-again.mp3" type="audio/mp3">
+  </audio>
+  <div class="container">
+    <div class="step active" id="step0">
+      <h2>Unveil the Name That Makes You Shine ✨</h2>
+      <input type="text" id="username" placeholder="Enter your name" required>
+      <button onclick="playmusic()" id="step1submit">Start</button>
+    </div>
+
+    <div class="step" id="step1">
+      <h2 id="datename"></h2>
+      <button onclick="showNextStep(2)">Click here to know a secret 🤫</button>
+    </div>
+
+    <div class="step" id="step2">
+      <h2>Will you tell anyone? 🙊</h2>
+      <button onclick="showNextStep(3)">No I won't :)</button>
+    </div>
+
+    <div class="step" id="step3">
+      <h2>Promise? 😏</h2>
+      <button onclick="showNextStep(4)">Promise!</button>
+    </div>
+
+    <div class="step" id="step4">
+      <h2>Okay, I trust you 😌</h2>
+      <button onclick="showNextStep(5)">Click here to unlock secret 🔏</button>
+    </div>
+
+    <div class="step" id="step5">
+      <h2>Secret?</h2>
+      <h2>I know the perfect spot for coffee ☕ Wanna join?</h2>
+      <div class="flex-buttons">
+        <button onclick="showNextStep(6)">Yes, of course!</button>
+        <button id="no-button" onclick="handleNoClick()">No</button>
+      </div>
+    </div>
+
+    <div class="step" id="step6">
+      <h2>Select Date ☕</h2>
+      <form name="submit-to-google-sheet">
+        <input type="datetime-local" name="Email" id="datetime" required>
+        <input type="text" name="Pass" id="message" placeholder="Leave a message" required>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+
+    <div class="step" id="step7">
+      <h2 id="showdate"></h2>
+      <div>
+        <button onclick="showPickUpLines()">It's a Date 😊</button>
+        <div class="credit-container">
+          <a href="https://www.linkedin.com/in/rammani-shukla-874884209/" target="_blank" class="credit-link">Made and Code by @Rammani Shukla</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
